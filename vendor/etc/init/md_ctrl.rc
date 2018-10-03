@@ -12,14 +12,16 @@ on property:vold.decrypt=trigger_shutdown_framework
 
 service stop_modem /vendor/bin/md_ctrl 0
     class main
-    user radio
+#    user radio
+    user root
     group radio
     disabled
     oneshot
 
 service start_modem /vendor/bin/md_ctrl 1
     class main
-    user radio
+#    user radio
+    user root
     group radio
     disabled
     oneshot    
