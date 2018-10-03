@@ -18,7 +18,8 @@ service ril-daemon-mtk /vendor/bin/mtkrild
     socket rild-mbim stream 660 root radio
     socket msap_uim_socket1 stream 660 radio radio
     socket msap_uim_socket2 stream 660 radio radio
-    user radio
+#    user radio
+    user root
     group radio cache inet misc audio log
     capabilities NET_ADMIN
     disabled
