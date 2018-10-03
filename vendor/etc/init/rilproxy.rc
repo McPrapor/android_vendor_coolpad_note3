@@ -10,7 +10,8 @@ service ril-proxy /vendor/bin/hw/rilproxy -l mtk-rilproxy.so
     socket sap_uim_socket2 stream 660 bluetooth bluetooth
     socket sap_uim_socket3 stream 660 bluetooth bluetooth
     socket sap_uim_socket4 stream 660 bluetooth bluetooth
-    user radio
+#    user radio
+    user root
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     oneshot
