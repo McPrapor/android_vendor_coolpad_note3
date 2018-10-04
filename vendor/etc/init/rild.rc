@@ -25,5 +25,24 @@ service ril-daemon-mtk /vendor/bin/mtkrild
     disabled
     oneshot
 
+service ril-daemon-mtkmd2 /system/bin/mtkrildmd2
+    class core
+    socket rild-md2 stream 660 root radio
+    socket rild2-md2 stream 660 root radio
+    socket rild-debug-md2 stream 660 radio system
+    socket rild-oem-md2 stream 660 radio system
+    socket rild-mtk-ut-md2 stream 660 radio net_bt
+    socket rild-mtk-ut-2-md2 stream 660 radio net_bt
+    socket rild-mtk-modem-md2 stream 660 radio system
+    socket rild-atci-md2 stream 660 root radio
+    socket rild-vsim-md2 stream 660 root radio
+    socket rild-mal-md2 stream 660 radio system
+    socket rild-mal-at-md2 stream 660 radio system
+    user root
+    group radio cache inet misc audio log
+    disabled
+    oneshot
+
 on property:ril.mtk=1
     start ril-daemon-mtk
+    start ril-daemon-mtkmd2
