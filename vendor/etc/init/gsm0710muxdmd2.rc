@@ -1,0 +1,7 @@
+service gsm0710muxdmd2 /system/bin/gsm0710muxdmd2 -s /dev/ccci2_tty0 -f 512 -n 8 -m basic
+    class core
+#    user radio
+    user root
+    group radio
+    disabled
+    oneshot
