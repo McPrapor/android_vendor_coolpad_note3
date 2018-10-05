@@ -1,0 +1,46 @@
+service extmdlogger /vendor/bin/extmdlogger
+    class main
+    user shell
+    group shell system radio
+
+service mdlogger /vendor/bin/mdlogger
+    class main
+    user shell
+    group shell system radio
+    disabled
+    oneshot
+
+service dualmdlogger /vendor/bin/dualmdlogger
+    class main
+    user shell
+    group shell system radio
+    disabled
+    oneshot
+
+service emdlogger1 /vendor/bin/emdlogger1
+    class main
+    user shell
+    group system shell radio
+    disabled
+    oneshot
+
+service emdlogger2 /vendor/bin/emdlogger2
+    class main
+    user shell
+    group system shell radio
+    disabled
+    oneshot
+
+service emdlogger5 /vendor/bin/emdlogger5
+    class main
+    user shell
+    group system shell radio
+    disabled
+    oneshot
+
+service emdlogger6 /vendor/bin/emdlogger6
+    class main
+    user shell
+    group system shell radio
+    disabled
+    oneshot
