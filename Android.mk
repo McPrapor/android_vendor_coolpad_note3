@@ -30,4 +30,13 @@ LOCAL_SRC_FILES_64 := vendor/lib64/libnvram.so
 LOCAL_MULTILIB := both
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := librilmtk
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES_32 := vendor/lib/librilmtk.so
+LOCAL_SRC_FILES_64 := vendor/lib64/librilmtk.so
+LOCAL_MULTILIB := both
+include $(BUILD_PREBUILT)
+
 endif
