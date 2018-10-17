@@ -1,6 +1,6 @@
-service ccci_fsd /vendor/bin/ccci_fsd 0
-    class core
-#    user radio
-    user root
-    group radio nvram
-    oneshot
+#service ccci_fsd /vendor/bin/ccci_fsd 0
+#    class core
+##    user radio
+#    user root
+#    group radio nvram
+#    oneshot
