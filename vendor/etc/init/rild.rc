@@ -1,3 +1,10 @@
+service ril-daemon-mtk /vendor/bin/hw/rild
+    class core
+    user root
+    group radio cache inet misc audio log readproc wakelock system
+    disabled
+    oneshot
+
 #service ril-daemon-mtk /vendor/bin/mtkrild
 #    class core
 #    socket mrild stream 660 root radio
@@ -25,5 +32,5 @@
 #    disabled
 #    oneshot
 
-#on property:ril.mtk=1
-#    start ril-daemon-mtk
+on property:ril.mtk=1
+    start ril-daemon-mtk
