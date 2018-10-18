@@ -3,7 +3,6 @@ on property:vold.decrypt=trigger_restart_framework
 
 service nvram_daemon /vendor/bin/nvram_daemon
     class main
-#    user nvram
-    user root
+    user nvram
     group nvram
     oneshot
