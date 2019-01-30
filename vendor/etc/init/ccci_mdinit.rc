@@ -1,5 +1,6 @@
 service ccci_mdinit /vendor/bin/ccci_mdinit 0
     class core
-    user radio
+#    user radio
+    user root
     group radio
     oneshot
