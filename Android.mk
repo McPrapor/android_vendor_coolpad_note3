@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),note3 note3lite))
+ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),htc_v36bml_dugl))
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := lib_fpc_tac_shared
